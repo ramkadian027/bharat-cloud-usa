@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bharat Cloud USA - Permanent Storage</title>
+<style>
+body{font-family:Arial;text-align:center;background:#f0f8ff;padding:20px}
+.box{background:white;padding:20px;border-radius:15px;box-shadow:0 5px 15px #0002;max-width:400px;margin:auto}
+h1{color:#ff6a00}
+button{background:#0ac30a;color:white;border:none;padding:15px 30px;border-radius:10px;font-size:18px;width:100%;margin-top:10px}
+.upload{border:2px dashed #0a84ff;padding:30px;border-radius:10px;margin:20px 0;background:#f9f9ff}
+</style>
+</head>
+<body>
+<div class="box">
+<h1>🇮🇳 Bharat Cloud USA 🇺🇸</h1>
+<p>Permanent Cloud Storage - India to USA</p>
+<div class="upload">
+<p>📁 File Yaha Drop Karo</p>
+<input type="file" id="file" style="margin-top:10px">
+<p id="status"></p>
+</div>
+<h3>Plan: ₹49 / Month - Unlimited</h3>
+<button onclick="pay()">UPI Se Pay Karo - Active Karo</button>
+<p style="margin-top:20px;font-size:12px;color:gray">Owner: Ram Kadian<br>ramkadian027.github.io/bharat-cloud-usa<br>Server: USA (Global Access)</p>
+</div>
+<script>
+function pay(){
+ window.location.href="upi://pay?pa=ramkadian027@okhdfcbank&pn=BharatCloud&am=49&cu=INR";
+ alert("UPI App Khulega - ₹49 Pay karke Screenshot bhejo!");
+}
+document.getElementById('file').onchange=function(e){
+ document.getElementById('status').innerHTML="✅ File Ready: "+e.target.files[0].name+"<br>Pay karke Permanent Save hoga!";
+}
+</script>
+</body>
+</html>
