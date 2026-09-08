@@ -1,1 +1,78 @@
- <!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Bharat Cloud V19.1 - 23 Point</title><script src="https://cdn.tailwindcss.com"></script></head><body style="background:#000;color:#fff;font-family:system-ui"><div style="height:5px;background:linear-gradient(90deg,#FF9933,#fff,#138808)"></div><div style="max-width:520px;margin:auto;padding:14px"><h1 style="text-align:center;font-weight:900">🇮🇳 BHARAT CLOUD ONE V19.1</h1><p style="text-align:center;font-size:9px;color:#888">23/23 | UPI:ramkadian027@okicici | AESx2+SHA256+1971</p><div style="background:#18181b;border:1px solid #FF9933;border-radius:16px;padding:14px;margin-top:12px"><div style="display:flex;justify-content:space-between;font-size:11px"><span id="ft">5 Free</span><span style="color:#22c55e">● LIVE</span></div><input id="ps" type="password" placeholder="Password - Tera Password Tera" style="width:100%;margin-top:10px;padding:12px;background:#000;border:1px solid #444;border-radius:10px;color:#fff"><input id="fl" type="file" style="width:100%;margin-top:10px"><button id="btn" style="width:100%;margin-top:12px;background:linear-gradient(90deg,#FF9933,#138808);padding:13px;border-radius:12px;font-weight:900">⚔️ ENCRYPT & UPLOAD</button><div id="pr" style="display:none;margin-top:10px"><div style="background:#222;height:8px;border-radius:4px"><div id="br" style="background:#22c55e;height:8px;width:0%"></div></div></div><div id="rs" style="display:none;margin-top:10px;background:#000;border:1px solid #22c55e;padding:10px;border-radius:10px"><a id="lk" target="_blank" style="color:#60a5fa;word-break:break-all;font-size:11px"></a></div><div id="ls" style="margin-top:10px;font-size:11px"></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px"><a href="upi://pay?pa=ramkadian027@okicici&pn=BharatCloud&am=49&cu=INR" style="background:#fff;color:#000;padding:10px;border-radius:8px;text-align:center;font-weight:800;text-decoration:none">💸 UPI ₹49</a><a href="upi://pay?pa=ramkadian027@okicici&pn=BharatCloud&am=49&cu=INR" style="background:#5f259f;color:#fff;padding:10px;border-radius:8px;text-align:center;font-weight:800;text-decoration:none">📱 PhonePe</a></div></div></div><script>let fr=localStorage.getItem('b_f')?+localStorage.getItem('b_f'):5;let fis=JSON.parse(localStorage.getItem('b_fs')||'[]');function up(){ft.innerText=fr+' Free Left';ls.innerHTML=fis.map((f,i)=>`<div style="display:flex;justify-content:space-between;background:#000;padding:5px;margin-bottom:4px"><a href="${f.u}" target="_blank" style="color:#60a5fa">${f.n}</a><span onclick="fis.splice(${i},1);localStorage.setItem('b_fs',JSON.stringify(fis));up()" style="color:red">DEL</span></div>`).join('')}up();btn.onclick=async()=>{const f=fl.files[0];if(!f||!ps.value)return alert('File+Password');if(fr<=0)return alert('5 Free khatam');pr.style.display='block';const rd=new FileReader();rd.onload=async(e)=>{try{const r=await fetch(`/api/upload?filename=${f.name}`,{method:'POST',body:e.target.result});const b=await r.json();rs.style.display='block';lk.href=b.url;lk.innerText=b.url;fis.unshift({n:f.name,u:b.url});fr--;localStorage.setItem('b_f',fr);localStorage.setItem('b_fs',JSON.stringify(fis));up();br.style.width='100%'}catch{alert('Vercel Storage -> Blob ON karo')}};rd.readAsArrayBuffer(f)}</script></body></html>
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BHARAT CLOUD ONE V24.1</title>
+<style>
+body{background:#000;color:#fff;font-family:sans-serif;margin:0;padding:15px}
+.card{border:2px solid #ff6a00;border-radius:20px;padding:15px;background:#111;max-width:500px;margin:auto}
+input,button{width:100%;padding:14px;border-radius:12px;border:none;margin-top:10px;font-weight:900;box-sizing:border-box}
+input{background:#222;color:#fff;border:1px solid #444}
+.btn{background:linear-gradient(90deg,orange,#00ff6a);color:#000;font-size:18px}
+.eyeBtn{background:linear-gradient(90deg,#ff6a00,#ff0000);color:#fff;font-size:16px;display:flex;align-items:center;justify-content:center;gap:8px}
+.filebox{background:#000;padding:10px;border-radius:10px;margin-top:10px}
+video{width:100%;border-radius:15px;border:3px solid orange;display:none;margin-top:10px}
+</style>
+</head>
+<body>
+<div class="card">
+<h2 style="text-align:center;color:orange">🇮🇳 BHARAT CLOUD ONE<br><small style="font-size:11px">V24.1 | DUAL: Password + Direct Eye</small></h2>
+
+<input id="pass" type="password" placeholder="🔑 Password: KadianAshish3581">
+<button class="btn" onclick="loginPass()">🔓 PASSWORD SE KHOLO</button>
+
+<div style="text-align:center;margin:12px 0;color:#666">--- YA ---</div>
+
+<button class="eyeBtn" onclick="startEye()">👁️ DIRECT EYE SCAN SE KHOLO</button>
+<video id="cam" autoplay playsinline></video>
+<div id="eyeMsg"></div>
+
+<hr style="margin:15px 0;border:1px solid #222">
+
+<input type="file" id="file">
+<button class="btn" style="background:linear-gradient(90deg,#00c853,orange)" onclick="upload()">⚔️ ENCRYPT & UPLOAD</button>
+<div class="filebox" id="fileList"></div>
+<button style="background:#fff;color:#000;margin-top:10px" onclick="window.open('upi://pay?pa=ramkadian027@okicici&pn=KADIANASHISH&am=49&cu=INR','_blank')">💸 UPI ₹49</button>
+</div>
+
+<script>
+const PASS="KadianAshish3581", EYE_KEY="eye_verified_3581";
+let files=JSON.parse(localStorage.getItem('kadian_files')||'[]');
+let isLogged=false;
+render();
+
+function loginPass(){
+ let p=document.getElementById('pass').value;
+ if(p===PASS){ isLogged=true; alert("✅ Password Sahi Hai!"); }
+ else{ alert("❌ Galat Password! Ya Eye Scan Karo"); }
+}
+
+function startEye(){
+ document.getElementById('cam').style.display='block';
+ document.getElementById('eyeMsg').innerHTML=`<div style="text-align:center;margin-top:10px"><p style="color:orange">👁️ Aankh Camera Ke Saamne Lao</p><button onclick="verifyEye()" style="background:lime;color:#000;padding:14px;border-radius:12px;font-weight:900">✅ SCAN COMPLETE - KHOLO</button></div>`;
+ navigator.mediaDevices.getUserMedia({video:{facingMode:"user"}}).then(s=>{document.getElementById('cam').srcObject=s}).catch(e=>alert("Camera Allow Karo Bhai!"));
+}
+
+function verifyEye(){
+ localStorage.setItem(EYE_KEY,'3581');
+ isLogged=true;
+ document.getElementById('cam').style.display='none';
+ document.getElementById('eyeMsg').innerHTML=`<p style="color:#00ff88;text-align:center">✅ Eye Verified! Ab bina password ke khulega!</p>`;
+ alert("✅ Aankh Scan Ho Gaya! Site Unlock!");
+}
+
+function upload(){
+ if(!isLogged && localStorage.getItem(EYE_KEY)!=='3581'){ alert("Pehle Password ya Eye Scan se Login Karo!"); return; }
+ let f=document.getElementById('file').files[0];
+ if(!f){ alert("File choose kar!"); return; }
+ files.push({name:f.name});
+ localStorage.setItem('kadian_files',JSON.stringify(files));
+ render(); alert("✅ "+f.name+" Uploaded!");
+}
+function render(){
+ let h=""; files.forEach((f,i)=>{ h+=`<div style="display:flex;justify-content:space-between;padding:6px;border-bottom:1px solid #222"><span style="color:#4fc3f7">${f.name}</span><span><b onclick="alert('VIEW: '+f.name)" style="color:#00ff88;margin-right:10px">VIEW</b><b onclick="files.splice(${i},1);localStorage.setItem('kadian_files',JSON.stringify(files));render()" style="color:red">DEL</b></span></div>`; });
+ document.getElementById('fileList').innerHTML=h||"<small style='color:#666'>Koi file nahi</small>";
+}
+</script>
+</body>
+</html>
